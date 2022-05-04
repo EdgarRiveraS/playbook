@@ -19,5 +19,11 @@ class User{
     getLastUpdated(){
         return `El ultimo dato Agregado fue: ${this.lastUpdated}`
     }
+    set setUserName (newUserName){
+        this.userName = newUserName
+    }
+    set setUserbio(newBio){
+        this.bio = newBio
+    }
 }
 module.exports = User
