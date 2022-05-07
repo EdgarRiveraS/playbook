@@ -5,4 +5,4 @@ class Reader{
         return JSON.parse(rawdata);
     }
 }
-module.exports= Reader
+module.exports= Reader;

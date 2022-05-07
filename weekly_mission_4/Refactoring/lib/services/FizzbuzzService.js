@@ -1,4 +1,4 @@
-const Reader = require('../utils/Reader')
+const Reader = require("../utils/Reader");
 
 class FizzbuzzService{
     static applyValidationInExplorer(explorers){
@@ -16,10 +16,10 @@ class FizzbuzzService{
                 explorer.trick = explorer.score;
                 return explorer;
             }
-            };
-    const explorersInNodeAndFizzBuzzAndOtherTrick = explorers.map((explorer) => assignFizzBuzzAndOtherTrick(explorer));
-    return explorersInNodeAndFizzBuzzAndOtherTrick
+        };
+        const explorersInNodeAndFizzBuzzAndOtherTrick = explorers.map((explorer) => assignFizzBuzzAndOtherTrick(explorer));
+        return explorersInNodeAndFizzBuzzAndOtherTrick;
     }
 
 }
-module.exports = FizzbuzzService
+module.exports = FizzbuzzService;
