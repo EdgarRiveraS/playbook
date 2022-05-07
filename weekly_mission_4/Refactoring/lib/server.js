@@ -21,6 +21,16 @@ app.get("/v1/explorers/usernames/:mission",(request,response) =>{
     const userNamesExplorersInMission = ExplorerController.getExplorersUsernamesByMission(mission);
     response.json({mission: request.params.mission, explorers: userNamesExplorersInMission});
 });
+app.get("/v1/fizzbuzz/:score",(request,response) =>{
+    const score = request.params.score;
+    const scoreExplorersInMission = ExplorerController.applyValidaScoreExplorer(score);
+    response.json({score: request.params.score, trick: scoreExplorersInMission});
+});
+app.get("/v1/explorers/stack/:stack",(request,response)=>{
+    const stack = request.params.stack;
+    const stackExplorerInMission = ExplorerController.stackExplorersByMission(stack);
+    response.json({stack: request.params.stack, Explorers: stackExplorerInMission});
+});
 app.listen(port, () => {
     console.log(`FizzBuzz API in localhost:${port}`);
 });

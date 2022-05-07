@@ -11,5 +11,11 @@ class ExplorerService{
         const ExplorersUsernamesByMission = explorers.filter((explorer) => explorer.mission == mission);
         const UsernamesByMission = ExplorersUsernamesByMission.map((explorer) => explorer.githubUsername);
         return UsernamesByMission;
-    }}
+    }
+    static getExplorerStacksByMission(explorers,stack){
+        const stacksByExplorers = explorers.filter((explorer) => explorer.stacks.includes(stack));
+        const UsernamesByMission = stacksByExplorers.map((explorer) => explorer.githubUsername);
+        return UsernamesByMission;
+    }
+}
 module.exports = ExplorerService;
