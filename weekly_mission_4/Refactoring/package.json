@@ -4,6 +4,7 @@
   "description": "",
   "main": "server.js",
   "scripts": {
+    "bot": "node ./lib/bot.js",
     "start": "nodemon ./lib/server.js",
     "test": "jest",
     "linter": "node ./node_modules/eslint/bin/eslint.js .",
@@ -17,7 +18,9 @@
     "nodemon": "^2.0.16"
   },
   "dependencies": {
+    "dotenv": "^16.0.1",
     "express": "^4.18.1",
-    "jest": "^28.1.0"
+    "jest": "^28.1.0",
+    "node-telegram-bot-api": "^0.57.0"
   }
 }
